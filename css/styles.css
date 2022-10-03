@@ -15,6 +15,25 @@
     0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
 body {
   font-family: var(--ff-Roboto);
   color: var(--main-color-text);
@@ -38,6 +57,24 @@ font-family: 'Roboto', sans-serif; */
   margin: -1px;
 }
 
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.header-main {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  margin-right: 93px;
+}
+
 .logo {
   font-family: var(--ff-Raleway);
   font-weight: 700;
@@ -51,9 +88,14 @@ font-family: 'Roboto', sans-serif; */
 .logo span {
   color: var(--accent-color);
 }
-
 .header-list {
+  display: flex;
+
   list-style: none;
+}
+
+.header-list li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .link {
@@ -64,6 +106,9 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .header-link {
+  display: block;
+  padding: 32px 0;
+
   color: var(--secondary-color-text);
 }
 
@@ -75,8 +120,16 @@ font-family: 'Roboto', sans-serif; */
 .active .header-link {
   color: var(--accent-color);
 }
+
 .header-item {
+  display: flex;
+  margin-left: auto;
+
   list-style: none;
+}
+
+.header-item li:not(:last-child) {
+  margin-right: 50px;
 }
 
 .header-contacts {
@@ -91,19 +144,27 @@ font-family: 'Roboto', sans-serif; */
 /* section decision */
 .decision {
   background-color: var(--bg-color);
+  text-align: center;
+}
+
+.section {
+  padding: 94px 0;
 }
 
 .decision h1 {
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color-text);
 }
 
 .button {
+  padding: 10px 32px;
+
   font-family: var(--ff-Roboto);
   font-weight: 700;
   font-size: 16px;
@@ -112,7 +173,7 @@ font-family: 'Roboto', sans-serif; */
   color: var(--white-color-text);
   background-color: var(--accent-color);
   border-radius: 4px;
-  border: none;
+  border: 2px solid var(--accent-color);
   cursor: pointer;
 }
 
@@ -124,10 +185,13 @@ font-family: 'Roboto', sans-serif; */
 /* section advantages */
 
 .advantages-list {
+  display: flex;
   list-style: none;
 }
 
 .advantages-subtitle {
+  margin-bottom: 10px;
+
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -142,7 +206,17 @@ font-family: 'Roboto', sans-serif; */
 /* section doing */
 
 .doing-items {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
+}
+
+.doing-items li:not(:last-child) {
+  margin-right: 30px;
+}
+.doing-title {
+  margin-bottom: 50px;
 }
 
 .title {
@@ -159,15 +233,36 @@ font-family: 'Roboto', sans-serif; */
   background-color: var(--button-bg-color);
 }
 
+.team-title {
+  margin-bottom: 50px;
+}
+
 .team-list {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
 }
 .team-item {
+  text-align: center;
   background-color: var(--white-color-text);
   box-shadow: var(--team-item-shadow);
   border-radius: 0px 0px 4px 4px;
 }
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-item img {
+  margin-bottom: 30px;
+
+  overflow: hidden;
+}
+
 .team-subtitle {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -176,6 +271,8 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .team-text {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -187,12 +284,22 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .footer-logo {
+  display: block;
+  padding-top: 60px;
+  margin-bottom: 20px;
+
   color: var(--white-color-text);
 }
 
 .footer-list {
+  padding-bottom: 60px;
+
   font-style: normal;
   list-style: none;
+}
+
+.footer-list li:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-link {
@@ -220,10 +327,19 @@ font-family: 'Roboto', sans-serif; */
 /* section portfolio */
 
 .works-item {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
   list-style: none;
 }
 
+.works-item li:not(:last-child) {
+  margin-right: 8px;
+}
+
 .works-button {
+  padding: 6px 22px;
   font-family: var(--ff-Roboto);
   font-weight: 500;
   font-size: 16px;
@@ -245,7 +361,20 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .works-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
   list-style: none;
+}
+.works-list li {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
+
+.works-list li {
+  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .works-title {
