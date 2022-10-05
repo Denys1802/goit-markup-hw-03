@@ -13,6 +13,8 @@
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --works-button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  --header-border: #ececec;
+  --margin-li-item: 30px;
 }
 
 h1,
@@ -20,7 +22,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
 
@@ -28,10 +31,6 @@ ul,
 li {
   margin: 0;
   padding: 0;
-}
-
-p {
-  margin: 0;
 }
 
 body {
@@ -64,7 +63,7 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--header-border);
 }
 .header-main {
   display: flex;
@@ -152,7 +151,7 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .decision h1 {
-  margin-bottom: 30px;
+  margin-bottom: var(--margin-li-item);
 
   font-weight: 900;
   font-size: 44px;
@@ -163,6 +162,8 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .button {
+  display: block;
+  margin: 0 auto;
   padding: 10px 32px;
 
   font-family: var(--ff-Roboto);
@@ -186,7 +187,17 @@ font-family: 'Roboto', sans-serif; */
 
 .advantages-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--margin-li-item));
+  margin-top: calc(-1 * var(--margin-li-item));
+
   list-style: none;
+}
+
+.advantages-list li {
+  flex-basis: calc(100% / 4 - var(--margin-li-item));
+  margin-left: var(--margin-li-item);
+  margin-top: var(--margin-li-item);
 }
 
 .advantages-subtitle {
@@ -208,13 +219,22 @@ font-family: 'Roboto', sans-serif; */
 .doing-items {
   display: flex;
   flex-wrap: wrap;
+  margin-left: calc(-1 * var(--margin-li-item));
+  margin-top: calc(-1 * var(--margin-li-item));
 
   list-style: none;
 }
 
-.doing-items li:not(:last-child) {
-  margin-right: 30px;
+.doing-items li {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: var(--margin-li-item);
+  margin-top: var(--margin-li-item);
 }
+
+.doing-link img {
+  display: block;
+}
+
 .doing-title {
   margin-bottom: 50px;
 }
@@ -244,20 +264,32 @@ font-family: 'Roboto', sans-serif; */
   list-style: none;
 }
 .team-item {
-  text-align: center;
   background-color: var(--white-color-text);
   box-shadow: var(--team-item-shadow);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item:not(:last-child) {
-  margin-right: 30px;
+.team-item {
+  margin-right: var(--margin-li-item);
+  margin-bottom: var(--margin-li-item);
+}
+
+.team-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.team-item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
 }
 
 .team-item img {
-  margin-bottom: 30px;
-
+  display: block;
   overflow: hidden;
+}
+
+.team-content {
+  padding: 30px 15px;
+  text-align: center;
 }
 
 .team-subtitle {
@@ -271,8 +303,6 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .team-text {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
@@ -280,20 +310,18 @@ font-family: 'Roboto', sans-serif; */
 
 /*section footer */
 .footer {
+  padding: 60px 0;
   background-color: var(--bg-color);
 }
 
 .footer-logo {
   display: block;
-  padding-top: 60px;
   margin-bottom: 20px;
 
   color: var(--white-color-text);
 }
 
 .footer-list {
-  padding-bottom: 60px;
-
   font-style: normal;
   list-style: none;
 }
@@ -339,6 +367,7 @@ font-family: 'Roboto', sans-serif; */
 }
 
 .works-button {
+  display: block;
   padding: 6px 22px;
   font-family: var(--ff-Roboto);
   font-weight: 500;
@@ -362,22 +391,34 @@ font-family: 'Roboto', sans-serif; */
 
 .works-list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  margin-left: calc(-1 * var(--margin-li-item));
+  margin-top: calc(-1 * var(--margin-li-item));
 
   list-style: none;
 }
 .works-list li {
-  background: #ffffff;
-  border: 1px solid #eeeeee;
+  outline: 1px solid tomato;
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: var(--margin-li-item);
+  margin-top: var(--margin-li-item);
+
+  border: 1px solid var(--header-border);
 }
 
-.works-list li {
-  margin-right: 30px;
-  margin-bottom: 30px;
+.works-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.works-content {
+  padding: 20px 24px;
 }
 
 .works-title {
+  margin-bottom: 4px;
+
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
