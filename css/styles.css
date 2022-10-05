@@ -398,7 +398,6 @@ font-family: 'Roboto', sans-serif; */
   list-style: none;
 }
 .works-list li {
-  outline: 1px solid tomato;
   flex-basis: calc(100% / 3 - 30px);
   margin-left: var(--margin-li-item);
   margin-top: var(--margin-li-item);
